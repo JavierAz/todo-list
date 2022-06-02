@@ -1,11 +1,19 @@
-<h1>Welcome!</h1>
+{% extends 'base/principal.html' %}
+{% block content %}
 
-<form method="post">
-    {% csrf_token %}
+    <div class="navbar-sup">
+        <h1>Welcome!</h1>
+    </div>
 
-    {{ form.as_p }}
+    <div class="tarjet-body">
+        <form method="post">
+            {% csrf_token %}
 
-    <input type="submit" value="Log In">
-</form>
+            {{ form.as_p }}
 
-<p>New User?<a href="{% url 'register' %}">Register</a> </p>
+            <input class="button" type="submit" value="Log In">
+        </form>
+        <p>New User?<a href="{% url 'register' %}">Register</a></p>
+    </div>
+
+{% endblock content %}

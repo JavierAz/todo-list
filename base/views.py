@@ -45,6 +45,11 @@ class PendingList(LoginRequiredMixin, ListView):
         context = super().get_context_data(**kwargs)
         context['tasks'] = context['tasks'].filter(user=self.request.user)
         context['count'] = context['tasks'].filter(complete=False).count()
+
+        value_search = self.request.GET.get('search') or ''
+        if value_search:
+            context['tasks'] = context['tasks'].filter(title__icontains=value_search)
+        context['values_search'] = value_search
         return context
 
 
