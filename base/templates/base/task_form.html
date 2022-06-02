@@ -1,0 +1,9 @@
+<h1>Tasks Form</h1>
+<a href="{% url 'tasks' %}">Cancel</a>
+<form method="post" action="">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit" value="Send">
+</form>
