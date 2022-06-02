@@ -1,9 +1,18 @@
-<h1>Tasks Form</h1>
-<a href="{% url 'tasks' %}">Cancel</a>
-<form method="post" action="">
-    {% csrf_token %}
+{% extends 'base/principal.html' %}
+{% block content %}
 
-    {{ form.as_p }}
+    <div class="navbar-sup">
+        <a href="{% url 'tasks' %}">&#x2B05;</a>
+    </div>
 
-    <input type="submit" value="Send">
-</form>
+    <div class="tarjet-body">
+        <form method="post" action="">
+            {% csrf_token %}
+
+            {{ form.as_p }}
+
+            <input class="button" type="submit" value="Send">
+        </form>
+    </div>
+
+{% endblock content %}
