@@ -1,0 +1,9 @@
+templates/
+
+venv/
+
+.gitignore
+.idea/
+.git/
+README.md
+Dockerfile
