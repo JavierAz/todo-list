@@ -8,7 +8,7 @@ from django.contrib.auth import login
 from django.urls import reverse_lazy
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
-
+from django.core.exceptions import BadRequest
 
 class Log(LoginView):
     template_name = 'base/login.html'
@@ -35,6 +35,7 @@ class Register(FormView):
         if self.request.user.is_authenticated:
             return redirect('tasks')
         return super(Register, self).get(*args, **kwargs)
+        
 
 
 class PendingList(LoginRequiredMixin, ListView):

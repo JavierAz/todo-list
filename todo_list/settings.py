@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+^w#-08a0^_r&$aor@uc5m)omw=(41jiqjpwcao&#r2ikk)6s-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -55,9 +55,7 @@ ROOT_URLCONF = 'todo_list.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        # 'DIRS': [BASE_DIR / 'templates']
-        'DIRS': ['/home/javier/PycharmProjects/todo_list/base/templates']
-        ,
+        'DIRS': [BASE_DIR / 'base/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
