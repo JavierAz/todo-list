@@ -56,3 +56,16 @@ python manage.py startapp base
 ```zsh
 python manage.py runserver
 ```
+
+## Better Docker
+After clone the repo you need crate the Docker image with thw following line:
+```
+docker build -t todo-list:alpine .
+```
+
+Then you can run it
+```
+docker run --rm --name rodo-alpine -p 8080:8000 todo-list:alpine
+```
+
+And congrats you have running the app
