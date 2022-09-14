@@ -58,7 +58,7 @@ python manage.py runserver
 ```
 
 ## Better Docker
-After clone the repo you need crate the Docker image with thw following line:
+After clone the repo you need crate the Docker image with the following line:
 ```
 docker build -t todo-list:alpine .
 ```
